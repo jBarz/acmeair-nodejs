@@ -14,6 +14,8 @@
 * limitations under the License.
 *******************************************************************************/
 
+require('appmetrics-dash').monitor();
+
 var express = require('express')
   , http = require('http')
   , fs = require('fs')

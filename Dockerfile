@@ -7,7 +7,8 @@ MAINTAINER Yang Lei <yanglei@us.ibm.com>
 # Installation:
 
 # Update apt-get sources AND install NodeJS and npm
-RUN apt-get update && apt-get install -y nodejs && apt-get install -y npm 
+RUN apt-get update && apt-get install -y curl && apt-get install -y apt-utils
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && apt-get update && apt-get install -y nodejs
 
 # The real logic
 
@@ -22,7 +23,7 @@ RUN \
 
 WORKDIR /var/apps/acmeair-nodejs
 
-EXPOSE 9080 9443
+EXPOSE 9080 9443 3001
 
 ENV APP_NAME app.js
 
