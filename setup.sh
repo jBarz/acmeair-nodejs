@@ -1,6 +1,8 @@
 # First install Docker for macos from here
 #https://store.docker.com/editions/community/docker-ce-desktop-mac
 
+# cd into the cloned git directory
+
 # Download and run a default mongodb instance
 docker run --name mongo_001 -d -P mongo
 
